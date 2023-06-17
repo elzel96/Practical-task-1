@@ -80,9 +80,9 @@ class ViewController: UIViewController {
     private func setupHierarchy() {
         view.addSubview(imageView)
         view.addSubview(newView)
-        view.addSubview(firstLabel)
-        view.addSubview(secondLabel)
-        view.addSubview(button)
+        newView.addSubview(firstLabel)
+        newView.addSubview(secondLabel)
+        newView.addSubview(button)
     }
     
     private func setupLayout() {
