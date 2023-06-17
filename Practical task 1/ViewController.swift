@@ -86,27 +86,29 @@ class ViewController: UIViewController {
     }
     
     private func setupLayout() {
-        imageView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: (0.26 * (view.bounds.width))).isActive = true
-        imageView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: (-0.26 * (view.bounds.width))).isActive = true
-        imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: (0.17 * (view.bounds.height))).isActive = true
-        imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor, multiplier: 1.15).isActive = true
+        NSLayoutConstraint.activate([
+        imageView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: (0.26 * (view.bounds.width))),
+        imageView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: (-0.26 * (view.bounds.width))),
+        imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: (0.17 * (view.bounds.height))),
+        imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor, multiplier: 1.15),
         
-        newView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: (0.04 * (view.bounds.width))).isActive = true
-        newView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: (-0.04 * (view.bounds.width))).isActive = true
-        newView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: (0.17 * (view.bounds.height))).isActive = true
-        newView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: (-0.08 * (view.bounds.height))).isActive = true
+        newView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: (0.04 * (view.bounds.width))),
+        newView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: (-0.04 * (view.bounds.width))),
+        newView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: (0.17 * (view.bounds.height))),
+        newView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: (-0.08 * (view.bounds.height))),
         
-        button.leftAnchor.constraint(equalTo: newView.leftAnchor, constant: (0.12 * (view.bounds.width))).isActive = true
-        button.rightAnchor.constraint(equalTo: newView.rightAnchor, constant: (-0.12 * (view.bounds.width))).isActive = true
-        button.bottomAnchor.constraint(equalTo: newView.bottomAnchor, constant: (-0.045 * (view.bounds.height))).isActive = true
-        button.heightAnchor.constraint(equalToConstant: (0.06 * (view.bounds.height))).isActive = true
+        button.leftAnchor.constraint(equalTo: newView.leftAnchor, constant: (0.12 * (view.bounds.width))),
+        button.rightAnchor.constraint(equalTo: newView.rightAnchor, constant: (-0.12 * (view.bounds.width))),
+        button.bottomAnchor.constraint(equalTo: newView.bottomAnchor, constant: (-0.045 * (view.bounds.height))),
+        button.heightAnchor.constraint(equalToConstant: (0.06 * (view.bounds.height))),
         
-        firstLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        firstLabel.topAnchor.constraint(equalTo: newView.topAnchor, constant: (0.04 * (view.bounds.height))).isActive = true
+        firstLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+        firstLabel.topAnchor.constraint(equalTo: newView.topAnchor, constant: (0.04 * (view.bounds.height))),
         
-        secondLabel.leftAnchor.constraint(equalTo: newView.leftAnchor, constant: (0.077 * (view.bounds.width))).isActive = true
-        secondLabel.rightAnchor.constraint(equalTo: newView.rightAnchor, constant: (-0.077 * (view.bounds.width))).isActive = true
-        secondLabel.topAnchor.constraint(equalTo: newView.topAnchor, constant: (0.099 * (view.bounds.height))).isActive = true
+        secondLabel.leftAnchor.constraint(equalTo: newView.leftAnchor, constant: (0.077 * (view.bounds.width))),
+        secondLabel.rightAnchor.constraint(equalTo: newView.rightAnchor, constant: (-0.077 * (view.bounds.width))),
+        secondLabel.topAnchor.constraint(equalTo: newView.topAnchor, constant: (0.099 * (view.bounds.height)))
+        ])
     }
 }
 
