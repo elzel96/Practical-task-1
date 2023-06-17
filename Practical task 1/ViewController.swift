@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         let label = UILabel()
         label.text = "Keytar sweenet"
         label.textAlignment = .center
-        label.font  = .systemFont(ofSize: 24, weight: .bold)
+        label.font = UIFont(name: "GTWalsheimPro-Black", size: 24)
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.textAlignment = .center
-        label.font  = .systemFont(ofSize: 14, weight: .bold)
+        label.font = UIFont(name: "GTWalsheimPro-Bold", size: 14)
         label.textColor = .gray
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

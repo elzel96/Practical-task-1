@@ -13,6 +13,8 @@
 		79084E5E2A3D1858000E48A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79084E5C2A3D1858000E48A7 /* Main.storyboard */; };
 		79084E602A3D1859000E48A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79084E5F2A3D1859000E48A7 /* Assets.xcassets */; };
 		79084E632A3D1859000E48A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79084E612A3D1859000E48A7 /* LaunchScreen.storyboard */; };
+		79084E922A3DC488000E48A7 /* GTWalsheimPro-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79084E912A3DC488000E48A7 /* GTWalsheimPro-Black.ttf */; };
+		79084E942A3DC6A5000E48A7 /* GTWalsheimPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79084E932A3DC6A5000E48A7 /* GTWalsheimPro-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		79084E5F2A3D1859000E48A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79084E622A3D1859000E48A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79084E642A3D1859000E48A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79084E912A3DC488000E48A7 /* GTWalsheimPro-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTWalsheimPro-Black.ttf"; sourceTree = "<group>"; };
+		79084E932A3DC6A5000E48A7 /* GTWalsheimPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTWalsheimPro-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,7 @@
 		79084E4A2A3D1858000E48A7 = {
 			isa = PBXGroup;
 			children = (
+				79084E902A3DC430000E48A7 /* font */,
 				79084E552A3D1858000E48A7 /* Practical task 1 */,
 				79084E542A3D1858000E48A7 /* Products */,
 			);
@@ -65,6 +70,15 @@
 				79084E642A3D1859000E48A7 /* Info.plist */,
 			);
 			path = "Practical task 1";
+			sourceTree = "<group>";
+		};
+		79084E902A3DC430000E48A7 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				79084E912A3DC488000E48A7 /* GTWalsheimPro-Black.ttf */,
+				79084E932A3DC6A5000E48A7 /* GTWalsheimPro-Bold.ttf */,
+			);
+			path = font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +140,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				79084E632A3D1859000E48A7 /* LaunchScreen.storyboard in Resources */,
+				79084E942A3DC6A5000E48A7 /* GTWalsheimPro-Bold.ttf in Resources */,
 				79084E602A3D1859000E48A7 /* Assets.xcassets in Resources */,
 				79084E5E2A3D1858000E48A7 /* Main.storyboard in Resources */,
+				79084E922A3DC488000E48A7 /* GTWalsheimPro-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
