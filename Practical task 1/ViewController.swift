@@ -98,8 +98,8 @@ class ViewController: UIViewController {
         
         button.leftAnchor.constraint(equalTo: newView.leftAnchor, constant: (0.12 * (view.bounds.width))).isActive = true
         button.rightAnchor.constraint(equalTo: newView.rightAnchor, constant: (-0.12 * (view.bounds.width))).isActive = true
-        button.bottomAnchor.constraint(equalTo: newView.bottomAnchor, constant: (-0.12 * (view.bounds.width))).isActive = true
-        button.heightAnchor.constraint(equalTo: newView.widthAnchor, multiplier: 0.18).isActive = true
+        button.bottomAnchor.constraint(equalTo: newView.bottomAnchor, constant: (-0.045 * (view.bounds.height))).isActive = true
+        button.heightAnchor.constraint(equalToConstant: (0.06 * (view.bounds.height))).isActive = true
         
         firstLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         firstLabel.topAnchor.constraint(equalTo: newView.topAnchor, constant: (0.04 * (view.bounds.height))).isActive = true
