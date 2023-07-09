@@ -58,6 +58,7 @@ class ViewController: UIViewController {
         button.tintColor = .white
         button.titleLabel?.font = .italicSystemFont(ofSize: 15)
         button.titleLabel?.textAlignment = .center
+        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -109,6 +110,12 @@ class ViewController: UIViewController {
         secondLabel.rightAnchor.constraint(equalTo: newView.rightAnchor, constant: (-0.077 * (view.bounds.width))),
         secondLabel.topAnchor.constraint(equalTo: newView.topAnchor, constant: (0.099 * (view.bounds.height)))
         ])
+    }
+    
+    // MARK: - Action
+    
+    @objc func buttonTapped() {
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeViewController(viewController: SettingsViewController(), animated: true, animationOptions: .transitionFlipFromRight)
     }
 }
 
