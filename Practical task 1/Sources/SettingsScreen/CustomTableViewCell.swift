@@ -9,14 +9,21 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
     
+    var isOn: Bool?
+    
+    var onChanged: ((Bool) -> ())?
+    
     var model: Model? {
         didSet {
             icon.image = model?.icon
             title.text = model?.title
             subtitle.text = model?.subtitle
-            switchButton.isOn = model?.isOn ?? false
+            isOn = model?.isOn ?? false
             if model?.isOn == nil {
                 switchButton.isHidden = true
+            } else {
+                switchButton.isHidden = false
+                switchButton.isOn = isOn ?? false
             }
             additionalInfo.text = model?.additionalInfo
             if model?.additionalInfo == nil {
@@ -53,6 +60,7 @@ class CustomTableViewCell: UITableViewCell {
         let switchButton = UISwitch()
         switchButton.onTintColor = .systemPink
         switchButton.tintColor = .systemPink
+        switchButton.addTarget(self, action: #selector(switchButtonActivated), for: .valueChanged)
         switchButton.translatesAutoresizingMaskIntoConstraints = false
         return switchButton
     }()
@@ -100,11 +108,25 @@ class CustomTableViewCell: UITableViewCell {
             subtitle.leadingAnchor.constraint(equalTo: icon.trailingAnchor, constant: 19),
             subtitle.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 5),
             
-            switchButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 330),
+            switchButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 350),
             switchButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 18),
             
-            additionalInfo.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 330),
+            additionalInfo.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 350),
             additionalInfo.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 18)
         ])
+    }
+    
+    // MARK: - Action
+    
+    @objc private func switchButtonActivated() {
+        isOn?.toggle()
+        onChanged?(isOn ?? false)
+    }
+    
+    // MARK: - Reuse
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        model = nil
     }
 }

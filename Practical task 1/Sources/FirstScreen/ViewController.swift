@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     // MARK: - UI Elements
     
     private lazy var imageView: UIImageView = {
