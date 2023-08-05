@@ -14,6 +14,8 @@
 		79084E632A3D1859000E48A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79084E612A3D1859000E48A7 /* LaunchScreen.storyboard */; };
 		79084E922A3DC488000E48A7 /* GTWalsheimPro-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79084E912A3DC488000E48A7 /* GTWalsheimPro-Black.ttf */; };
 		79084E942A3DC6A5000E48A7 /* GTWalsheimPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79084E932A3DC6A5000E48A7 /* GTWalsheimPro-Bold.ttf */; };
+		79A429FC2A7EBA1200CC6CF8 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A429FB2A7EBA1200CC6CF8 /* NotificationView.swift */; };
+		79A429FE2A7EBA5000CC6CF8 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A429FD2A7EBA5000CC6CF8 /* NavigationBarView.swift */; };
 		79ECF8CA2A593E8400721BCB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ECF8C92A593E8400721BCB /* SettingsViewController.swift */; };
 		79ECF8D32A59456600721BCB /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ECF8D22A59456600721BCB /* CustomTableViewCell.swift */; };
 		79ECF8D72A5945C000721BCB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ECF8D62A5945C000721BCB /* Model.swift */; };
@@ -29,6 +31,8 @@
 		79084E642A3D1859000E48A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79084E912A3DC488000E48A7 /* GTWalsheimPro-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTWalsheimPro-Black.ttf"; sourceTree = "<group>"; };
 		79084E932A3DC6A5000E48A7 /* GTWalsheimPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTWalsheimPro-Bold.ttf"; sourceTree = "<group>"; };
+		79A429FB2A7EBA1200CC6CF8 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		79A429FD2A7EBA5000CC6CF8 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		79ECF8C92A593E8400721BCB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		79ECF8D22A59456600721BCB /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		79ECF8D62A5945C000721BCB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -80,6 +84,31 @@
 			path = font;
 			sourceTree = "<group>";
 		};
+		79A429FF2A7EC42600CC6CF8 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				79A429FB2A7EBA1200CC6CF8 /* NotificationView.swift */,
+				79A429FD2A7EBA5000CC6CF8 /* NavigationBarView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		79A42A002A7EC43D00CC6CF8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				79ECF8D22A59456600721BCB /* CustomTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		79A42A012A7EC44500CC6CF8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				79ECF8D62A5945C000721BCB /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		79ECF8CD2A593FC700721BCB /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +121,7 @@
 		79ECF8CE2A59404500721BCB /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				79A429FF2A7EC42600CC6CF8 /* CustomViews */,
 				79ECF8D02A5944C200721BCB /* FirstScreen */,
 				79ECF8D12A5944E000721BCB /* SettingsScreen */,
 				79084E612A3D1859000E48A7 /* LaunchScreen.storyboard */,
@@ -121,8 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				79ECF8C92A593E8400721BCB /* SettingsViewController.swift */,
-				79ECF8D22A59456600721BCB /* CustomTableViewCell.swift */,
-				79ECF8D62A5945C000721BCB /* Model.swift */,
+				79A42A002A7EC43D00CC6CF8 /* Cell */,
+				79A42A012A7EC44500CC6CF8 /* Model */,
 			);
 			path = SettingsScreen;
 			sourceTree = "<group>";
@@ -201,7 +231,9 @@
 			files = (
 				79ECF8D72A5945C000721BCB /* Model.swift in Sources */,
 				79084E5B2A3D1858000E48A7 /* ViewController.swift in Sources */,
+				79A429FE2A7EBA5000CC6CF8 /* NavigationBarView.swift in Sources */,
 				79ECF8D32A59456600721BCB /* CustomTableViewCell.swift in Sources */,
+				79A429FC2A7EBA1200CC6CF8 /* NotificationView.swift in Sources */,
 				79084E572A3D1858000E48A7 /* AppDelegate.swift in Sources */,
 				79084E592A3D1858000E48A7 /* SceneDelegate.swift in Sources */,
 				79ECF8CA2A593E8400721BCB /* SettingsViewController.swift in Sources */,
