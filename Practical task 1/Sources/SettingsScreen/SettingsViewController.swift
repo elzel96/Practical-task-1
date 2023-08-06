@@ -69,7 +69,7 @@ class SettingsViewController: UIViewController {
     }
 }
 
-// MARK: - Extensions
+// MARK: - UITableViewDataSource
 
 extension SettingsViewController: UITableViewDataSource { // построение отображения таблицы
     
@@ -78,15 +78,17 @@ extension SettingsViewController: UITableViewDataSource { // построени�
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CustomTableViewCell
-        cell?.model = model[indexPath.row]
-        cell?.onChanged = { [weak self] state in
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CustomTableViewCell else { return UITableViewCell() }
+        cell.model = model[indexPath.row]
+        cell.onChanged = { [weak self] state in
             self?.model[indexPath.row].isOn = state
         }
-        return cell ?? UITableViewCell()
+        return cell
     }
     
 }
+
+// MARK: - UITableViewDelegate
 
 extension SettingsViewController: UITableViewDelegate { // взаимодействие с таблицей
     

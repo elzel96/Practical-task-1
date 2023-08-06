@@ -80,7 +80,7 @@ class NavigationBarView: UIView {
             backButton.topAnchor.constraint(equalTo: topAnchor, constant: 64),
             backButton.heightAnchor.constraint(equalToConstant: 24),
             
-            label.leftAnchor.constraint(equalTo: rightAnchor, constant: 15),
+            label.leftAnchor.constraint(equalTo: leftAnchor, constant: 65),
             label.topAnchor.constraint(equalTo: topAnchor, constant: 64)
         ])
     }

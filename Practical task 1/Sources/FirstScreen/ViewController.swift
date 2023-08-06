@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         return view
     }()
     
-    private lazy var firstLabel: UILabel = {
+    private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Keytar sweenet"
         label.textAlignment = .center
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         return label
     }()
     
-    private lazy var secondLabel: UILabel = {
+    private lazy var subtitleLabel: UILabel = {
         let label = UILabel()
         label.text = "Portland ugh fashion axe Helvetica. Echo Park Austin gastropub roof party."
         label.numberOfLines = 0
@@ -82,8 +82,8 @@ class ViewController: UIViewController {
     private func setupHierarchy() {
         view.addSubview(imageView)
         view.addSubview(newView)
-        newView.addSubview(firstLabel)
-        newView.addSubview(secondLabel)
+        newView.addSubview(titleLabel)
+        newView.addSubview(subtitleLabel)
         newView.addSubview(button)
     }
     
@@ -104,12 +104,12 @@ class ViewController: UIViewController {
         button.bottomAnchor.constraint(equalTo: newView.bottomAnchor, constant: (-0.045 * (view.bounds.height))),
         button.heightAnchor.constraint(equalToConstant: (0.06 * (view.bounds.height))),
         
-        firstLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-        firstLabel.topAnchor.constraint(equalTo: newView.topAnchor, constant: (0.04 * (view.bounds.height))),
+        titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+        titleLabel.topAnchor.constraint(equalTo: newView.topAnchor, constant: (0.04 * (view.bounds.height))),
         
-        secondLabel.leftAnchor.constraint(equalTo: newView.leftAnchor, constant: (0.077 * (view.bounds.width))),
-        secondLabel.rightAnchor.constraint(equalTo: newView.rightAnchor, constant: (-0.077 * (view.bounds.width))),
-        secondLabel.topAnchor.constraint(equalTo: newView.topAnchor, constant: (0.099 * (view.bounds.height)))
+        subtitleLabel.leftAnchor.constraint(equalTo: newView.leftAnchor, constant: (0.077 * (view.bounds.width))),
+        subtitleLabel.rightAnchor.constraint(equalTo: newView.rightAnchor, constant: (-0.077 * (view.bounds.width))),
+        subtitleLabel.topAnchor.constraint(equalTo: newView.topAnchor, constant: (0.099 * (view.bounds.height)))
         ])
     }
     
